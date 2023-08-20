@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 
-class ReadOnly(permissions.BasePermission):
+class ReadOnlyOrAuthor(permissions.BasePermission):
 
     message = 'Редактирование недоступно.'
 

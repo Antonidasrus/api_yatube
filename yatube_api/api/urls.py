@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import SimpleRouter
 
-from .views import CommentViewSet, GroupViewSet, PostViewSet
+from api.views import CommentViewSet, GroupViewSet, PostViewSet
 
 
 router = SimpleRouter()

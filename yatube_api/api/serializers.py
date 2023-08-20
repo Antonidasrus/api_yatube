@@ -9,14 +9,21 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ('id',
+                  'author',
+                  'post',
+                  'text',
+                  'created')
 
 
 class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = '__all__'
+        fields = ('id',
+                  'title',
+                  'slug',
+                  'description')
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -25,4 +32,9 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = ('id',
+                  'text',
+                  'pub_date',
+                  'author',
+                  'image',
+                  'group')
